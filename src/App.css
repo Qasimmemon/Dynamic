@@ -1,0 +1,199 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+/* HTML: <div class="loader"></div> */
+/* From Uiverse.io by eslam-hany */ 
+.input-container {
+  position: relative;
+}
+
+.input {
+  padding: 10px;
+  height: 40px;
+  border: 2px solid #0B2447;
+  border-top: none;
+  border-bottom: none;
+  font-size: 16px;
+  background: transparent;
+  outline: none;
+  box-shadow: 7px 7px 0px 0px #0B2447;
+  transition: all 0.5s;
+}
+
+.input:focus {
+  box-shadow: none;
+  transition: all 0.5s;
+}
+
+.label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: #0B2447;
+  transition: all 0.5s;
+  transform: scale(0);
+  z-index: -1;
+}
+
+.input-container .topline {
+  position: absolute;
+  content: "";
+  background-color: #0B2447;
+  width: 0%;
+  height: 2px;
+  right: 0;
+  top: 0;
+  transition: all 0.5s;
+}
+
+.input-container input[type="text"]:focus ~ .topline {
+  width: 35%;
+  transition: all 0.5s;
+}
+
+.input-container .underline {
+  position: absolute;
+  content: "";
+  background-color: #0B2447;
+  width: 0%;
+  height: 2px;
+  right: 0;
+  bottom: 0;
+  transition: all 0.5s;
+}
+
+.input-container input[type="text"]:focus ~ .underline {
+  width: 100%;
+  transition: all 0.5s;
+}
+
+.input-container input[type="text"]:focus ~ .label {
+  top: -10px;
+  transform: scale(1);
+  transition: all 0.5s;
+}
+
+option {
+  background-color: lightblue;
+  color: black;
+  font-size: 16px;
+}
+select option {
+  background-color: lightgreen;
+  color: white;
+}
+option[value="value1"] {
+  background-color: yellow;
+  font-weight: bold;
+}
+option:nth-child(2) {
+  background-color: orange;
+}
+option:checked {
+  background-color: lightcoral;
+  color: white;
+}
+
+.loader {
+  width: fit-content;
+  font-weight: bold;
+  font-family: sans-serif;
+  font-size: 30px;
+  padding-bottom: 8px;
+  background: linear-gradient(currentColor 0 0) 0 100%/0% 3px no-repeat;
+  animation: l2 2s linear infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader:before {
+  content:"Loading..."
+}
+@keyframes l2 {to{background-size: 100% 3px}}
+/* From Uiverse.io by Sashank02 */ 
+.card {
+  padding: 20px;
+  width: 330px;
+  min-height: 370px;
+  border-radius: 20px;
+  background: #212121;
+  box-shadow: 5px 5px 8px #1b1b1b,
+             -5px -5px 8px #272727;
+  transition: 0.4s;
+  
+}
+
+.card:hover {
+  translate: 0 -10px;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #b2eccf;
+  margin: 15px 0 0 10px;
+}
+
+.card-image {
+  min-height: 170px;
+  background-color: #313131;
+  border-radius: 15px;
+  background: #313131;
+  box-shadow: inset 5px 5px 3px #2f2f2f,
+            inset -5px -5px 3px #333333;
+}
+
+.card-body {
+  margin: 13px 0 0 10px;
+  color: rgb(184, 184, 184);
+  font-size: 15px;
+}
+
+.footer {
+  float: right;
+  margin: 28px 0 0 18px;
+  font-size: 13px;
+  color: #b3b3b3;
+}
+
+.by-name {
+  font-weight: 700;
+}
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
